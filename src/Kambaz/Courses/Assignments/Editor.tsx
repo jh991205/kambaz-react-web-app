@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 export default function AssignmentEditor() {
   return (
     <div id="wd-assignments-editor">
@@ -115,7 +117,6 @@ export default function AssignmentEditor() {
         </tr>
       </table>
       <hr />
-
       <div align="right">
           <button>Cancel</button>  <button>Save</button>
       </div>

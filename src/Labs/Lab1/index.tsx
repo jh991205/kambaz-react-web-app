@@ -304,18 +304,18 @@ _Starship-gap2.jpg"
         </form>
       </div>
       <h4>Anchor tag</h4>
-      Please
+      Please{" "}
       <a href="https://www.lipsum.com" id="wd-lipsum">
         click here
-      </a>
+      </a>{" "}
       to get dummy text
       {/*to be done!!!!!!!!!!*/}
       <br />
-      Please
-      <a href="https://www.github.com" id="wd-github">
+      Please{" "}
+      <a href="https://github.com/jh991205/kambaz-react-web-app" id="wd-github">
         click here
-      </a>
-      to get github link TBDTBDTBDTBDTBDTBD
+      </a>{" "}
+      to get github link
       <br />
     </div>
   );

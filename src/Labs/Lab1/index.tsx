@@ -1,6 +1,11 @@
 export default function Lab1() {
   return (
     <div id="wd-lab1">
+      <p>Jiadi Huang</p>
+      <p>Section: 01</p>
+      <a href="https://github.com/jh991205/kambaz-react-web-app" id="wd-github">
+        github source code
+      </a>{" "}
       <h2>Lab 1</h2>
       <h3>HTML Examples</h3>
       <div id="wd-h-tag">

@@ -17,8 +17,8 @@ export default function Lab2() {
           name, e.g., P, we can refer to a specific element by its ID
         </p>
         <p id="wd-id-selector-2">
-          Here's another paragraph using a different ID and a different look
-          anda feel
+          Here's another paragraph using a different ID and a different look and
+          feel
         </p>{" "}
       </div>
     </div>

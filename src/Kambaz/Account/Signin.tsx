@@ -1,21 +1,20 @@
 import { Link } from "react-router-dom";
+
 export default function Signin() {
   return (
-    <div id="wd-signin-screen">
-      <h3>Sign in</h3>
-      <input className="wd-username" placeholder="username" /> <br />
+    <div className="container mt-3" style={{ maxWidth: "280px" }}>
+      <h2 className="mb-2">Signin</h2>
+      <input className="form-control mb-2" placeholder="username" />{" "}
       <input
-        className="wd-password"
+        className="form-control mb-2"
         placeholder="password"
         type="password"
       />{" "}
-      <br />
-      <Link id="wd-signin-btn" to="/Kambaz/Dashboard">
-        Sign in
+      <Link to="/Kambaz/Dashboard" className="btn btn-primary w-100">
+        Signin
       </Link>
-      <br />
-      <Link id="wd-signup-link" to="/Kambaz/Account/Signup">
-        Sign up
+      <Link className="text-primary" to={"/Kambaz/Account/Signup"}>
+        Signup
       </Link>
     </div>
   );

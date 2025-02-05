@@ -1,8 +1,41 @@
 import "./index.css";
+import Foregroundcolor from "./Foregroundcolor";
+import BackgroundColor from "./BackgroundColor";
+import Borders from "./Borders";
+import Padding from "./Padding";
+import Margins from "./Margins";
+import Corners from "./Corners";
+import Dimensions from "./Dimensions";
+import Positions from "./Positions";
+import { Absolute, Fixed } from "./Positions";
+import Zindex from "./Zindex";
+import Float from "./Float";
+import { Float_div } from "./Float";
+import GridLayout from "./GridLayout";
+import Flex from "./Flex";
+import ReactIconsSampler from "./ReactIcons";
+import BootstrapGrids, { Responsive_Dramatic } from "./BootstrapGrids";
+import { Responsive_grids } from "./BootstrapGrids";
+import ScreenSizeLabel from "./ScreenSizeLabel";
+import BootStrapTables from "./BootStrapTables";
+import { Responsive_tables } from "./BootStrapTables";
+import BootstrapLists from "./BootstrapLists";
+import { Hyperlink_list } from "./BootstrapLists";
+import BootstrapForm from "./BootstrapForm";
+import {
+  Dropdown,
+  Switches,
+  Range,
+  Addons,
+  Responsive_forms,
+  Responsive_form_2,
+} from "./BootstrapForm";
+import BootstrapNavigation from "./BootstrapNavigation";
+import { Card_navigation } from "./BootstrapNavigation";
 
 export default function Lab2() {
   return (
-    <div id="wd-lab2">
+    <div className="container">
       <h2>Lab 2 - Cascading Style Sheets</h2>
       <h3>Styling with the STYLE attribute</h3>
       <p>
@@ -21,6 +54,72 @@ export default function Lab2() {
           feel
         </p>{" "}
       </div>
+      <div id="wd-css-class-selectors">
+        <h3>Class selectors</h3>
+        <p className="wd-class-selector">
+          Instead of using IDs to refer to elements, you can use an element's
+          CLASS attribute
+        </p>
+        <h4 className="wd-class-selector">
+          This heading has same style as paragraph above
+        </h4>
+      </div>
+      <div id="wd-css-document-structure">
+        <div className="wd-selector-1">
+          <h3>Document structure selectors</h3>
+          <div className="wd-selector-2">
+            Selectors can be combined to refer elements in particular places in
+            the document
+            <p className="wd-selector-3">
+              This paragraph's red background is referenced as
+              <br />
+              .selector-2 .selector3
+              <br />
+              meaning the descendant of some ancestor.
+              <br />
+              <span className="wd-selector-4">
+                Whereas this span is a direct child of its parent
+              </span>
+              <br />
+              You can combine these relationships to create specific styles
+              depending on the document structure
+            </p>{" "}
+          </div>
+        </div>
+      </div>
+      <Foregroundcolor></Foregroundcolor>
+      <BackgroundColor></BackgroundColor>
+      <Borders></Borders>
+      <Padding></Padding>
+      <Margins></Margins>
+      <Corners></Corners>
+      <Dimensions></Dimensions>
+      <Positions></Positions>
+      <Absolute></Absolute>
+      <Fixed></Fixed>
+      <Zindex></Zindex>
+      <Float></Float>
+      <Float_div></Float_div>
+      <GridLayout></GridLayout>
+      <Flex></Flex>
+      <ReactIconsSampler></ReactIconsSampler>
+      <BootstrapGrids></BootstrapGrids>
+      <Responsive_grids></Responsive_grids>
+      <Responsive_Dramatic></Responsive_Dramatic>
+      <ScreenSizeLabel></ScreenSizeLabel>
+      <BootStrapTables></BootStrapTables>
+      <Responsive_tables></Responsive_tables>
+      <BootstrapLists></BootstrapLists>
+      <Hyperlink_list></Hyperlink_list>
+      <BootstrapForm></BootstrapForm>
+      <Dropdown></Dropdown>
+      <Switches></Switches>
+      <Range></Range>
+      <Addons></Addons>
+      <Responsive_forms></Responsive_forms>
+      <Responsive_form_2></Responsive_form_2>
+      <BootstrapNavigation></BootstrapNavigation>
+      <Card_navigation></Card_navigation>
     </div>
   );
 }

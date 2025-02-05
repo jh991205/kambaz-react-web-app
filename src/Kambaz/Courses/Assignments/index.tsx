@@ -1,59 +1,148 @@
+import {
+  BsChevronDown,
+  BsGripVertical,
+  BsThreeDotsVertical,
+} from "react-icons/bs";
+import { FaPlus, FaSearch } from "react-icons/fa";
+import GreenCheckmark from "../Modules/GreenCheckmark";
+import { BiBook } from "react-icons/bi";
+
 export default function Assignments() {
   return (
     <div id="wd-assignments">
-      <input placeholder="Search for Assignments" id="wd-search-assignment" />
-      <button id="wd-add-assignment-group">+ Group</button>
-      <button id="wd-add-assignment">+ Assignment</button>
-      <h3 id="wd-assignments-title">
-        ASSIGNMENTS 40% of Total <button>+</button>{" "}
-      </h3>
-      <ul id="wd-assignment-list">
-        <li className="wd-assignment-list-item">
-          <a
-            href="#/Kambaz/Courses/1234/Assignments/123"
-            className="wd-assignment-link"
-          >
-            A1 - ENV + HTML
-          </a>
-          <div>
-            Multiple Modules | <strong>Not available until</strong> May 6 at
-            12:00am
+      <div className="d-flex align-items-center justify-content-between">
+        <div className="d-flex" style={{ width: "250px" }}>
+          <div className="input-group">
+            <span className="input-group-text">
+              <FaSearch />
+            </span>
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Search..."
+              id="wd-search-assignment"
+            />
           </div>
-          <div>
-            <strong>Due</strong> May 13 at 11:59pm | 100 pts
-          </div>
-        </li>
+        </div>
 
-        <li className="wd-assignment-list-item">
-          <a
-            href="#/Kambaz/Courses/1234/Assignments/124"
-            className="wd-assignment-link"
+        <div className="d-flex gap-2">
+          <button
+            id="wd-add-assignment-group"
+            className="btn btn-lg btn-secondary"
           >
-            A2 - CSS + BOOTSTRAP
-          </a>
-          <div>
-            Multiple Modules | <strong>Not available until</strong> May 13 at
-            12:00am
-          </div>
-          <div>
-            <strong>Due</strong> May 20 at 11:59pm | 100 pts
-          </div>
-        </li>
+            <FaPlus
+              className="position-relative me-2"
+              style={{ bottom: "1px" }}
+            />
+            Group
+          </button>
+          <button id="wd-add-assignment" className="btn btn-lg btn-danger">
+            <FaPlus
+              className="position-relative me-2"
+              style={{ bottom: "1px" }}
+            />
+            Assignment
+          </button>
+        </div>
+      </div>
 
-        <li className="wd-assignment-list-item">
-          <a
-            href="#/Kambaz/Courses/1234/Assignments/125"
-            className="wd-assignment-link"
-          >
-            A3 - JAVASCRIPT + REACT
-          </a>
-          <div>
-            Multiple Modules | <strong>Not available until</strong> May 20 at
-            12:00am
+      <ul id="wd-modules" className="list-group rounded-0 mt-4">
+        <li className="wd-module list-group-item p-0 mb-5 fs-5 border-gray">
+          <div className="wd-title p-3 ps-2 bg-secondary d-flex align-items-center justify-content-between">
+            <div className="d-flex align-items-center">
+              <BsGripVertical className="me-2 fs-3" />
+              <BsChevronDown className="me-2 fs-5" />
+              ASSIGNMENTS
+            </div>
+            <div className="d-flex align-items-center">
+              <span className="border rounded-pill px-3 py-1 text-muted">
+                40% of Total
+              </span>
+              <button className="btn btn-link text-dark ms-2">
+                <FaPlus />
+              </button>
+              <button className="btn btn-link text-dark ms-2">
+                <BsThreeDotsVertical />
+              </button>
+            </div>
           </div>
-          <div>
-            <strong>Due</strong> May 27 at 11:59pm | 100 pts
-          </div>
+          <ul className="wd-lessons list-group rounded-0">
+            <li className="wd-lesson list-group-item p-3 d-flex align-items-center justify-content-between border-start border-success">
+              <div className="d-flex align-items-center">
+                <BsGripVertical className="me-2 fs-5 text-muted" />
+                <BiBook className="me-2 fs-5 text-muted" />
+                <div>
+                  <a
+                    href="#/Kambaz/Courses/1234/Assignments/123"
+                    className="wd-assignment-link text-decoration-none text-dark fw-bold"
+                  >
+                    A1
+                  </a>
+                  <div className="text-muted">
+                    <span className="text-danger">Multiple Modules</span> |{" "}
+                    <strong>Not available until</strong> May 6 at 12:00am |
+                  </div>
+                  <div className="text-muted">
+                    <strong>Due</strong> May 13 at 11:59pm | 100 pts
+                  </div>
+                </div>
+              </div>
+              <div className="d-flex align-items-center">
+                <GreenCheckmark />
+                <BsThreeDotsVertical className="text-muted" />
+              </div>
+            </li>
+            <li className="wd-lesson list-group-item p-3 d-flex align-items-center justify-content-between border-start border-success">
+              <div className="d-flex align-items-center">
+                <BsGripVertical className="me-2 fs-5 text-muted" />
+                <BiBook className="me-2 fs-5 text-muted" />
+                <div>
+                  <a
+                    href="#/Kambaz/Courses/1234/Assignments/124"
+                    className="wd-assignment-link text-decoration-none text-dark fw-bold"
+                  >
+                    A2
+                  </a>
+                  <div className="text-muted">
+                    <span className="text-danger">Multiple Modules</span> |{" "}
+                    <strong>Not available until</strong> May 13 at 12:00am |
+                  </div>
+                  <div className="text-muted">
+                    <strong>Due</strong> May 20 at 11:59pm | 100 pts
+                  </div>
+                </div>
+              </div>
+              <div className="d-flex align-items-center">
+                <GreenCheckmark />
+                <BsThreeDotsVertical className="text-muted" />
+              </div>
+            </li>
+            <li className="wd-lesson list-group-item p-3 d-flex align-items-center justify-content-between border-start border-success">
+              <div className="d-flex align-items-center">
+                <BsGripVertical className="me-2 fs-5 text-muted" />
+                <BiBook className="me-2 fs-5 text-muted" />
+                <div>
+                  <a
+                    href="#/Kambaz/Courses/1234/Assignments/125"
+                    className="wd-assignment-link text-decoration-none text-dark fw-bold"
+                  >
+                    A3
+                  </a>
+                  <div className="text-muted">
+                    <span className="text-danger">Multiple Modules</span> |{" "}
+                    <strong>Not available until</strong> May 20 at 12:00am |
+                  </div>
+                  <div className="text-muted">
+                    <strong>Due</strong> May 27 at 11:59pm | 100 pts
+                  </div>
+                </div>
+              </div>
+              <div className="d-flex align-items-center">
+                <GreenCheckmark />
+                <BsThreeDotsVertical className="text-muted" />
+              </div>
+            </li>
+          </ul>
         </li>
       </ul>
     </div>

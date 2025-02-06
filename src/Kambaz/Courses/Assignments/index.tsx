@@ -11,7 +11,7 @@ export default function Assignments() {
   return (
     <div id="wd-assignments">
       <div className="d-flex align-items-center justify-content-between">
-        <div className="d-flex" style={{ width: "250px" }}>
+        <div className="d-flex" style={{ width: "200px" }}>
           <div className="input-group">
             <span className="input-group-text">
               <FaSearch />
@@ -26,21 +26,12 @@ export default function Assignments() {
         </div>
 
         <div className="d-flex gap-2">
-          <button
-            id="wd-add-assignment-group"
-            className="btn btn-lg btn-secondary"
-          >
-            <FaPlus
-              className="position-relative me-2"
-              style={{ bottom: "1px" }}
-            />
+          <button id="wd-add-assignment-group" className="btn btn-secondary">
+            <FaPlus className="position-relative" style={{ bottom: "1px" }} />
             Group
           </button>
-          <button id="wd-add-assignment" className="btn btn-lg btn-danger">
-            <FaPlus
-              className="position-relative me-2"
-              style={{ bottom: "1px" }}
-            />
+          <button id="wd-add-assignment" className="btn btn-danger">
+            <FaPlus className="position-relative" style={{ bottom: "1px" }} />
             Assignment
           </button>
         </div>
@@ -58,10 +49,10 @@ export default function Assignments() {
               <span className="border rounded-pill px-3 py-1 text-muted">
                 40% of Total
               </span>
-              <button className="btn btn-link text-dark ms-2">
+              <button className="btn btn-link text-dark p-1 mx-1">
                 <FaPlus />
               </button>
-              <button className="btn btn-link text-dark ms-2">
+              <button className="btn btn-link text-dark p-1 mx-1">
                 <BsThreeDotsVertical />
               </button>
             </div>

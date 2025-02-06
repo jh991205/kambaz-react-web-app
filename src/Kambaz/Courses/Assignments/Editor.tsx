@@ -5,16 +5,16 @@ export default function AssignmentEditor() {
     <div>
       <label>Assignment Name</label>
       <div className="mb-4 row">
-        <div className="col-sm-10">
-          <input id="wd-name" className="form-control" value="A1" />
+        <div>
+          <input id="wd-name" className="form-control w-100" value="A1" />
         </div>
       </div>
 
       <div className="mb-4 row">
-        <div className="col-sm-10">
+        <div>
           <textarea
             id="wd-description"
-            className="form-control"
+            className="form-control w-100"
             rows={5}
             defaultValue="The assignment is available online. Submit a link to the landing page of your Web application running on Netlify. The landing page should include the following: Your full name and section, links to each of the lab assignments, link to the Kanbas application, links to all relevant source code repositories."
           />
@@ -33,6 +33,8 @@ export default function AssignmentEditor() {
         <div className="col-sm-10">
           <select id="wd-group" className="form-select">
             <option>ASSIGNMENTS</option>
+            <option>ASSIGNMENTS1</option>
+            <option>ASSIGNMENTS2</option>
           </select>
         </div>
       </div>
@@ -42,6 +44,7 @@ export default function AssignmentEditor() {
         <div className="col-sm-10">
           <select id="wd-display-grade-as" className="form-select">
             <option>Percentage</option>
+            <option>Point</option>
           </select>
         </div>
       </div>

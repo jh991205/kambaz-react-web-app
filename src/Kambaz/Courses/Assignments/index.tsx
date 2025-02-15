@@ -6,8 +6,12 @@ import {
 import { FaPlus, FaSearch } from "react-icons/fa";
 import GreenCheckmark from "../Modules/GreenCheckmark";
 import { BiBook } from "react-icons/bi";
+import * as db from "../../Database";
+import { useParams } from "react-router";
 
 export default function Assignments() {
+  const { cid } = useParams();
+  const assignments = db.assignments;
   return (
     <div id="wd-assignments">
       <div className="d-flex align-items-center justify-content-between">
@@ -58,81 +62,40 @@ export default function Assignments() {
             </div>
           </div>
           <ul className="wd-lessons list-group rounded-0">
-            <li className="wd-lesson list-group-item p-3 d-flex align-items-center justify-content-between border-start border-success">
-              <div className="d-flex align-items-center">
-                <BsGripVertical className="me-2 fs-5 text-muted" />
-                <BiBook className="me-2 fs-5 text-muted" />
-                <div>
-                  <a
-                    href="#/Kambaz/Courses/1234/Assignments/123"
-                    className="wd-assignment-link text-decoration-none text-dark fw-bold"
-                  >
-                    A1
-                  </a>
-                  <div className="text-muted">
-                    <span className="text-danger">Multiple Modules</span> |{" "}
-                    <strong>Not available until</strong> May 6 at 12:00am |
+            {assignments
+              .filter((assignment: any) => assignment.course === cid)
+              .map((assignment: any) => (
+                <li
+                  key={assignment._id}
+                  className="wd-lesson list-group-item p-3 d-flex align-items-center justify-content-between border-start border-success"
+                >
+                  <div className="d-flex align-items-center">
+                    <BsGripVertical className="me-2 fs-5 text-muted" />
+                    <BiBook className="me-2 fs-5 text-muted" />
+                    <div>
+                      <a
+                        href={`#/Kambaz/Courses/${cid}/Assignments/${assignment._id}`}
+                        className="wd-assignment-link text-decoration-none text-dark fw-bold"
+                      >
+                        {assignment.title}
+                      </a>
+                      <div className="text-muted">
+                        <span className="text-danger">Multiple Modules</span> |{" "}
+                        <strong>Not available until</strong>{" "}
+                        {assignment.available_time} |
+                      </div>
+                      <div className="text-muted">
+                        <strong>Due</strong> {assignment.due_date} |{" "}
+                        {assignment.points_worth} pts
+                      </div>
+                    </div>
                   </div>
-                  <div className="text-muted">
-                    <strong>Due</strong> May 13 at 11:59pm | 100 pts
+                  <div className="d-flex align-items-center">
+                    <GreenCheckmark />
+                    <BsThreeDotsVertical className="text-muted" />
                   </div>
-                </div>
-              </div>
-              <div className="d-flex align-items-center">
-                <GreenCheckmark />
-                <BsThreeDotsVertical className="text-muted" />
-              </div>
-            </li>
-            <li className="wd-lesson list-group-item p-3 d-flex align-items-center justify-content-between border-start border-success">
-              <div className="d-flex align-items-center">
-                <BsGripVertical className="me-2 fs-5 text-muted" />
-                <BiBook className="me-2 fs-5 text-muted" />
-                <div>
-                  <a
-                    href="#/Kambaz/Courses/1234/Assignments/124"
-                    className="wd-assignment-link text-decoration-none text-dark fw-bold"
-                  >
-                    A2
-                  </a>
-                  <div className="text-muted">
-                    <span className="text-danger">Multiple Modules</span> |{" "}
-                    <strong>Not available until</strong> May 13 at 12:00am |
-                  </div>
-                  <div className="text-muted">
-                    <strong>Due</strong> May 20 at 11:59pm | 100 pts
-                  </div>
-                </div>
-              </div>
-              <div className="d-flex align-items-center">
-                <GreenCheckmark />
-                <BsThreeDotsVertical className="text-muted" />
-              </div>
-            </li>
-            <li className="wd-lesson list-group-item p-3 d-flex align-items-center justify-content-between border-start border-success">
-              <div className="d-flex align-items-center">
-                <BsGripVertical className="me-2 fs-5 text-muted" />
-                <BiBook className="me-2 fs-5 text-muted" />
-                <div>
-                  <a
-                    href="#/Kambaz/Courses/1234/Assignments/125"
-                    className="wd-assignment-link text-decoration-none text-dark fw-bold"
-                  >
-                    A3
-                  </a>
-                  <div className="text-muted">
-                    <span className="text-danger">Multiple Modules</span> |{" "}
-                    <strong>Not available until</strong> May 20 at 12:00am |
-                  </div>
-                  <div className="text-muted">
-                    <strong>Due</strong> May 27 at 11:59pm | 100 pts
-                  </div>
-                </div>
-              </div>
-              <div className="d-flex align-items-center">
-                <GreenCheckmark />
-                <BsThreeDotsVertical className="text-muted" />
-              </div>
-            </li>
+                </li>
+              ))}
           </ul>
         </li>
       </ul>

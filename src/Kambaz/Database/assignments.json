@@ -50,7 +50,7 @@
       "group": "QUIZZES",
       "display_grade_as": "Percentage",
       "submission_type": "Online",
-      "due_date": "May 13, 2024, 11:59 PM",
+      "due_date": "May 14, 2024, 11:59 PM",
       "available_from": "May 6, 2024, 12:00 AM",
       "available_until": "May 15, 2024, 11:59 PM",
       "assign_to": "Lucas White"
@@ -64,7 +64,7 @@
       "group": "ASSIGNMENTS",
       "display_grade_as": "Percentage",
       "submission_type": "Online",
-      "due_date": "May 20, 2024, 11:59 PM",
+      "due_date": "May 30, 2024, 11:59 PM",
       "available_from": "May 13, 2024, 12:00 AM",
       "available_until": "May 30, 2024, 11:59 PM",
       "assign_to": "Emma Johnson"
@@ -78,7 +78,7 @@
       "group": "ASSIGNMENTS",
       "display_grade_as": "Point",
       "submission_type": "Online",
-      "due_date": "May 27, 2024, 11:59 PM",
+      "due_date": "May 25, 2024, 11:59 PM",
       "available_from": "May 20, 2024, 12:00 AM",
       "available_until": "June 5, 2024, 11:59 PM",
       "assign_to": "William Davis"
@@ -92,7 +92,7 @@
       "group": "ASSIGNMENTS",
       "display_grade_as": "Percentage",
       "submission_type": "Online",
-      "due_date": "May 13, 2024, 11:59 PM",
+      "due_date": "May 18, 2024, 11:59 PM",
       "available_from": "May 6, 2024, 12:00 AM",
       "available_until": "May 27, 2024, 11:59 PM",
       "assign_to": "Olivia Martinez"
@@ -106,8 +106,8 @@
       "group": "ASSIGNMENTS",
       "display_grade_as": "Percentage",
       "submission_type": "Online",
-      "due_date": "May 20, 2024, 11:59 PM",
-      "available_from": "May 13, 2024, 12:00 AM",
+      "due_date": "May 19, 2024, 11:59 PM",
+      "available_from": "May 15, 2024, 12:00 AM",
       "available_until": "May 30, 2024, 11:59 PM",
       "assign_to": "Benjamin Wilson"
     },
@@ -120,7 +120,7 @@
       "group": "EXAMS",
       "display_grade_as": "Point",
       "submission_type": "Online",
-      "due_date": "May 27, 2024, 11:59 PM",
+      "due_date": "May 21, 2024, 11:59 PM",
       "available_from": "May 20, 2024, 12:00 AM",
       "available_until": "June 5, 2024, 11:59 PM",
       "assign_to": "Sophia Anderson"

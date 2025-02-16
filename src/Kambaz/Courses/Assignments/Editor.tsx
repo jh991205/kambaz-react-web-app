@@ -115,7 +115,6 @@ export default function AssignmentEditor() {
                 type="checkbox"
                 id="wd-website-url"
                 className="form-check-input"
-                defaultChecked
               />
               <label htmlFor="wd-website-url" className="form-check-label">
                 Website URL
@@ -127,7 +126,6 @@ export default function AssignmentEditor() {
                 type="checkbox"
                 id="wd-media-recordings"
                 className="form-check-input"
-                defaultChecked
               />
               <label htmlFor="wd-media-recordings" className="form-check-label">
                 Media Recordings

@@ -82,11 +82,11 @@ export default function Assignments() {
                       <div className="text-muted">
                         <span className="text-danger">Multiple Modules</span> |{" "}
                         <strong>Not available until</strong>{" "}
-                        {assignment.available_time} |
+                        {assignment.available_from} |
                       </div>
                       <div className="text-muted">
                         <strong>Due</strong> {assignment.due_date} |{" "}
-                        {assignment.points_worth} pts
+                        {assignment.points} pts
                       </div>
                     </div>
                   </div>

@@ -1,9 +1,16 @@
 import { BsCalendar2Date } from "react-icons/bs";
 import * as db from "../../Database";
-import { useParams } from "react-router";
+import { Link, useLocation, useParams } from "react-router";
 
 export default function AssignmentEditor() {
   const { aid } = useParams();
+  const location = useLocation();
+
+  const getAssignmentsUrl = () => {
+    const pathSegments = location.pathname.split("/");
+    pathSegments.pop();
+    return pathSegments.join("/");
+  };
 
   return (
     <div>
@@ -244,8 +251,12 @@ export default function AssignmentEditor() {
 
       <hr />
       <div className="d-flex justify-content-end gap-1">
-        <button className="btn btn-secondary">Cancel</button>
-        <button className="btn btn-danger">Save</button>
+        <Link to={getAssignmentsUrl()} className="btn btn-secondary">
+          Cancel
+        </Link>
+        <Link to={getAssignmentsUrl()} className="btn btn-danger">
+          Save
+        </Link>
       </div>
     </div>
   );

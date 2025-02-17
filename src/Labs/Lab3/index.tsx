@@ -81,7 +81,6 @@ export default function Lab3() {
       </Highlight>
       <hr />
       <PathParameters></PathParameters>
-      <AddPathParameters></AddPathParameters>
     </div>
   );
 }

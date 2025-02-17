@@ -11,9 +11,9 @@ export default function Spreading() {
       arr1 = {JSON.stringify(arr1)} <br />
       arr2 = {JSON.stringify(arr2)} <br />
       <h3>Object Spread</h3>
-      {JSON.stringify(obj1)}
-      {JSON.stringify(obj2)}
-      {JSON.stringify(obj3)}
+      {JSON.stringify(obj1)} <br />
+      {JSON.stringify(obj2)} <br />
+      {JSON.stringify(obj3)} <br />
     </div>
   );
 }
